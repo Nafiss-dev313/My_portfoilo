@@ -1,0 +1,694 @@
+html {
+  scroll-behavior: smooth;
+}
+body {
+    margin: 0;
+    font-family: sans-serif;
+    direction: rtl;
+    background: #f5f5f5;
+}
+
+.hero {
+    background: url('https://images.unsplash.com/photo-1611892441792-ae6af465f09c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80') center/cover no-repeat;
+    color: white;
+    text-align: center;
+    padding: 120px 20px;
+}
+
+.hero h1 {
+    font-size: 48px;
+    margin-bottom: 10px;
+}
+
+.hero p {
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+.btn {
+    background: #ffcc00;
+    padding: 12px 25px;
+    border-radius: 8px;
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+}
+
+.section {
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.rooms {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.room-card {
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 0 10px #ccc;
+}
+
+.price {
+    display: block;
+    margin-top: 10px;
+    font-weight: bold;
+    color: #ff8800;
+}
+
+footer {
+    background: #222;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    margin-top: 40px;
+}
+/* هدر */
+.header {
+  width: 100%;
+  padding: 15px 25px;
+  background: #ffffff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+/* لوگو */
+.logo {
+  font-size: 22px;
+  font-weight: bold;
+  color: #333;
+}
+
+/* منو */
+.navbar ul {
+  display: flex;
+  gap: 25px;
+  list-style: none;
+}
+
+.navbar ul li a {
+  text-decoration: none;
+  color: #333;
+  font-size: 16px;
+  transition: 0.3s;
+}
+
+.navbar ul li a:hover {
+  color: #0077ff;
+}
+
+/* دکمه منوی موبایل */
+.menu-btn {
+  display: none;
+  font-size: 28px;
+  cursor: pointer;
+}
+
+/* نسخه موبایل */
+@media (max-width: 768px) {
+  .navbar {
+    position: absolute;
+    top: 70px;
+    right: 0;
+    background: white;
+    width: 100%;
+    display: none;
+    flex-direction: column;
+    padding: 20px 0;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  }
+
+  .navbar ul {
+    flex-direction: column;
+    gap: 15px;
+    text-align: center;
+  }
+
+  .menu-btn {
+    display: block;
+  }
+}
+/* بخش معرفی (Hero Section) */
+.hero {
+  width: 100%;
+  height: 90vh;
+  background: url('https://images.unsplash.com/photo-1501117716987-c8e1ecb2101b') center/cover no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+/* لایه تاریک برای خوانایی بهتر */
+.hero::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.45);
+  top: 0;
+  left: 0;
+}
+
+.hero-content {
+  position: relative;
+  text-align: center;
+  color: white;
+  z-index: 2;
+}
+
+.hero-content h1 {
+  font-size: 48px;
+  margin-bottom: 15px;
+  font-weight: bold;
+}
+
+.hero-content p {
+  font-size: 20px;
+  margin-bottom: 25px;
+}
+
+.hero-btn {
+  padding: 12px 25px;
+  background: #0077ff;
+  color: white;
+  text-decoration: none;
+  border-radius: 6px;
+  font-size: 18px;
+  transition: 0.3s;
+}
+
+.hero-btn:hover {
+  background: #005fcc;
+}
+
+/* نسخه موبایل */
+@media (max-width: 768px) {
+  .hero-content h1 {
+    font-size: 32px;
+  }
+  .hero-content p {
+    font-size: 16px;
+  }
+  .hero-btn {
+    font-size: 16px;
+    padding: 10px 20px;
+  }
+}
+/* بخش امکانات هتل */
+.features {
+  padding: 60px 20px;
+  text-align: center;
+  background: #f8f8f8;
+}
+
+.features h2 {
+  font-size: 32px;
+  margin-bottom: 40px;
+  color: #333;
+}
+
+.features-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 25px;
+  max-width: 1100px;
+  margin: auto;
+}
+
+.feature-box {
+  background: white;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  transition: 0.3s;
+}
+
+.feature-box:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+}
+
+.icon {
+  font-size: 40px;
+  display: block;
+  margin-bottom: 15px;
+}
+
+.feature-box h3 {
+  font-size: 20px;
+  margin-bottom: 10px;
+  color: #222;
+}
+
+.feature-box p {
+  font-size: 15px;
+  color: #555;
+}
+/* گالری تصاویر */
+.gallery {
+  padding: 60px 20px;
+  background: #ffffff;
+  text-align: center;
+}
+
+.gallery h2 {
+  font-size: 32px;
+  margin-bottom: 40px;
+  color: #333;
+}
+
+.gallery-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  max-width: 1100px;
+  margin: auto;
+}
+
+.gallery-item {
+  overflow: hidden;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.gallery-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: 0.4s;
+}
+
+.gallery-item img:hover {
+  transform: scale(1.08);
+}
+/* بخش تماس */
+.contact {
+  padding: 60px 20px;
+  background: #f8f8f8;
+  text-align: center;
+}
+
+.contact h2 {
+  font-size: 32px;
+  margin-bottom: 40px;
+  color: #333;
+}
+
+.contact-container {
+  max-width: 1100px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+}
+
+/* اطلاعات تماس */
+.contact-info {
+  text-align: right;
+  font-size: 18px;
+  line-height: 2;
+  color: #444;
+}
+
+.contact-info a {
+  color: #0077ff;
+  text-decoration: none;
+}
+
+.contact-info a:hover {
+  text-decoration: underline;
+}
+
+/* فرم تماس */
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+}
+
+.contact-form textarea {
+  height: 120px;
+  resize: none;
+}
+
+.contact-form button {
+  padding: 12px;
+  background: #0077ff;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 18px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.contact-form button:hover {
+  background: #005fcc;
+}
+/* بخش رزرو آنلاین */
+.booking {
+  padding: 60px 20px;
+  background: #ffffff;
+  text-align: center;
+}
+
+.booking h2 {
+  font-size: 32px;
+  margin-bottom: 40px;
+  color: #333;
+}
+
+.booking-form {
+  max-width: 900px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+  align-items: end;
+}
+
+.form-group {
+  text-align: right;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 16px;
+  color: #444;
+}
+
+.form-group input,
+.form-group select {
+  width: 100%;
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+}
+
+.booking-btn {
+  padding: 14px;
+  background: #0077ff;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 18px;
+  cursor: pointer;
+  transition: 0.3s;
+  grid-column: span 3;
+}
+
+.booking-btn:hover {
+  background: #005fcc;
+}
+
+/* نسخه موبایل */
+@media (max-width: 768px) {
+  .booking-btn {
+    grid-column: span 1;
+  }
+}
+/* فوتر حرفه‌ای */
+.footer {
+  background: #111;
+  color: #ddd;
+  padding: 50px 20px 20px;
+  margin-top: 40px;
+}
+
+.footer-container {
+  max-width: 1100px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+}
+
+.footer-box h3 {
+  font-size: 20px;
+  margin-bottom: 15px;
+  color: #fff;
+}
+
+.footer-box p,
+.footer-box a {
+  font-size: 15px;
+  color: #ccc;
+  line-height: 1.8;
+  text-decoration: none;
+}
+
+.footer-box a:hover {
+  color: #0077ff;
+}
+
+.footer-box ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-box ul li {
+  margin-bottom: 10px;
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 30px;
+  padding-top: 15px;
+  border-top: 1px solid #333;
+}
+
+.footer-bottom p {
+  font-size: 14px;
+  color: #aaa;
+}
+/* بخش اتاق‌ها */
+.rooms {
+  padding: 60px 20px;
+  background: #f8f8f8;
+  text-align: center;
+}
+
+.rooms h2 {
+  font-size: 32px;
+  margin-bottom: 40px;
+  color: #333;
+}
+
+.rooms-container {
+  max-width: 1100px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 25px;
+}
+
+.room-box {
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  transition: 0.3s;
+}
+
+.room-box:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.15);
+}
+
+.room-box img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.room-box h3 {
+  font-size: 22px;
+  margin: 15px 0 10px;
+  color: #222;
+}
+
+.room-box p {
+  font-size: 15px;
+  color: #555;
+  padding: 0 15px;
+  margin-bottom: 10px;
+}
+
+.price {
+  display: block;
+  font-size: 16px;
+  color: #0077ff;
+  margin-bottom: 15px;
+}
+
+.room-btn {
+  display: block;
+  margin: 0 15px 20px;
+  padding: 10px;
+  background: #0077ff;
+  color: white;
+  text-decoration: none;
+  border-radius: 8px;
+  transition: 0.3s;
+}
+
+.room-btn:hover {
+  background: #005fcc;
+}
+/* صفحه درباره ما */
+.about {
+  padding: 60px 20px;
+  background: #ffffff;
+}
+
+.about-container {
+  max-width: 1100px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 40px;
+  align-items: center;
+}
+
+.about-text h1 {
+  font-size: 32px;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.about-text p {
+  font-size: 17px;
+  line-height: 2;
+  color: #555;
+  margin-bottom: 15px;
+}
+
+.about-image img {
+  width: 100%;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+/* حالت موبایل */
+@media (max-width: 768px) {
+
+  .navbar ul {
+    position: absolute;
+    top: 60px;
+    right: 0;
+    background: #fff;
+    width: 200px;
+    flex-direction: column;
+    padding: 15px 0;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    display: none;
+  }
+
+  .navbar.active ul {
+    display: flex;
+  }
+
+  .menu-btn {
+  display: none;
+  font-size: 28px;
+  cursor: pointer;
+}
+
+/* موبایل */
+@media (max-width: 768px) {
+
+  .menu-btn {
+    display: block;
+  }
+
+  .navbar {
+    position: absolute;
+    top: 70px;
+    left: 0;   /* 👈 سمت چپ */
+    background: white;
+    width: 220px;
+    display: none;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+  }
+
+  .navbar ul {
+    flex-direction: column;
+    padding: 15px;
+  }
+
+  .navbar ul li {
+    margin: 10px 0;
+  }
+
+  .navbar.active {
+    display: block;
+  }
+}
+
+  .navbar ul li {
+    margin: 10px 0;
+    text-align: right;
+  }
+}
+.testimonials {
+  padding: 50px 20px;
+  background: #f8f8f8;
+  text-align: center;
+}
+
+.testimonials h2 {
+  font-size: 28px;
+  margin-bottom: 30px;
+}
+
+.testimonial-item {
+  background: white;
+  padding: 20px;
+  margin: 15px auto;
+  max-width: 600px;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.testimonial-item p {
+  font-size: 16px;
+  line-height: 1.7;
+  color: #444;
+}
+
+.testimonial-item h4 {
+  margin-top: 15px;
+  font-size: 18px;
+  color: #222;
+}
+.rooms-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* دسکتاپ */
+  gap: 20px;
+}
+
+/* موبایل */
+@media (max-width: 768px) {
+  .rooms-container {
+    grid-template-columns: 1fr; /* یک ستون */
+  }
+}
