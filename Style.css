@@ -589,65 +589,58 @@ footer {
   box-shadow: 0 4px 12px rgba(0,0,0,0.1);
 }
 /* حالت موبایل */
-@media (max-width: 768px) {
+@media (max-width)
 
-  .navbar ul {
-    position: absolute;
-    top: 60px;
-    right: 0;
-    background: #fff;
-    width: 200px;
-    flex-direction: column;
-    padding: 15px 0;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-    display: none;
-  }
-
-  .navbar.active ul {
-    display: flex;
-  }
-
-  .menu-btn {
-  display: none;
-  font-size: 28px;
-  cursor: pointer;
-}
-
-/* موبایل */
-@media (max-width: 768px) {
-
-  .menu-btn {
-    display: block;
-  }
-
-  .navbar {
+.navbar {
     position: absolute;
     top: 70px;
-    left: 0;   /* 👈 سمت چپ */
+    left: 0;
     background: white;
     width: 220px;
     display: none;
     box-shadow: 0 5px 15px rgba(0,0,0,0.15);
-  }
-
-  .navbar ul {
-    flex-direction: column;
-    padding: 15px;
-  }
-
-  .navbar ul li {
-    margin: 10px 0;
-  }
-
-  .navbar.active {
-    display: block;
-  }
+    z-index: 999; /* مهم برای اینکه روی صفحه قرار بگیرد */
 }
 
-  .navbar ul li {
+.navbar ul {
+    display: flex;
+    flex-direction: column;
+    padding: 15px;
+    margin: 0;
+}
+
+.navbar ul li {
     margin: 10px 0;
     text-align: right;
-  }
+}
+
+.navbar.active {
+    display: block;
+}.navbar {
+    position: absolute;
+    top: 70px;
+    left: 0;
+    background: white;
+    width: 220px;
+    display: none;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+    z-index: 999; /* مهم برای اینکه روی صفحه قرار بگیرد */
+}
+
+.navbar ul {
+    display: flex;
+    flex-direction: column;
+    padding: 15px;
+    margin: 0;
+}
+
+.navbar ul li {
+    margin: 10px 0;
+    text-align: right;
+}
+
+.navbar.active {
+    display: block;
 }
 .testimonials {
   padding: 50px 20px;
