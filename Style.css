@@ -591,56 +591,80 @@ footer {
 /* حالت موبایل */
 @media (max-width)
 
+/* حالت دسکتاپ (پیش‌فرض) */
 .navbar {
-    position: absolute;
-    top: 70px;
-    left: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     background: white;
-    width: 220px;
-    display: none;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.15);
-    z-index: 999; /* مهم برای اینکه روی صفحه قرار بگیرد */
+    padding: 15px 30px;
 }
 
 .navbar ul {
     display: flex;
-    flex-direction: column;
-    padding: 15px;
+    flex-direction: row;
+    gap: 20px;
     margin: 0;
+    padding: 0;
 }
 
-.navbar ul li {
-    margin: 10px 0;
-    text-align: right;
-}
+/* موبایل */
+@media (max-width: 768px) {
+  .navbar {
+      position: absolute;
+      top: 70px;
+      left: 0;
+      width: 220px;
+      display: none;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+      z-index: 999;
+  }
 
-.navbar.active {
-    display: block;
-}.navbar {
-    position: absolute;
-    top: 70px;
-    left: 0;
+  .navbar ul {
+      flex-direction: column;
+      padding: 15px;
+  }
+
+  .navbar.active {
+      display: block;
+  }
+}/* حالت دسکتاپ (پیش‌فرض) */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     background: white;
-    width: 220px;
-    display: none;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.15);
-    z-index: 999; /* مهم برای اینکه روی صفحه قرار بگیرد */
+    padding: 15px 30px;
 }
 
 .navbar ul {
     display: flex;
-    flex-direction: column;
-    padding: 15px;
+    flex-direction: row;
+    gap: 20px;
     margin: 0;
+    padding: 0;
 }
 
-.navbar ul li {
-    margin: 10px 0;
-    text-align: right;
-}
+/* موبایل */
+@media (max-width: 768px) {
+  .navbar {
+      position: absolute;
+      top: 70px;
+      left: 0;
+      width: 220px;
+      display: none;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+      z-index: 999;
+  }
 
-.navbar.active {
-    display: block;
+  .navbar ul {
+      flex-direction: column;
+      padding: 15px;
+  }
+
+  .navbar.active {
+      display: block;
+  }
 }
 .testimonials {
   padding: 50px 20px;
