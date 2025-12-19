@@ -1,0 +1,918 @@
+html {
+  scroll-behavior: smooth;
+}
+body {
+    margin: 0;
+    font-family: sans-serif;
+    direction: rtl;
+    background: #f5f5f5;
+}
+
+.hero {
+    background: url('https://images.unsplash.com/photo-1611892441792-ae6af465f09c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80') center/cover no-repeat;
+    color: white;
+    text-align: center;
+    padding: 120px 20px;
+}
+
+.hero h1 {
+    font-size: 48px;
+    margin-bottom: 10px;
+}
+
+.hero p {
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+.btn {
+    background: #ffcc00;
+    padding: 12px 25px;
+    border-radius: 8px;
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+}
+
+.section {
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.rooms {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.room-card {
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 0 10px #ccc;
+}
+
+.price {
+    display: block;
+    margin-top: 10px;
+    font-weight: bold;
+    color: #ff8800;
+}
+
+footer {
+    background: #222;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    margin-top: 40px;
+}
+/* هدر */
+.header {
+  width: 100%;
+  padding: 15px 25px;
+  background: #ffffff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+/* لوگو */
+.logo {
+  font-size: 22px;
+  font-weight: bold;
+  color: #333;
+}
+
+/* منو */
+.navbar ul {
+  display: flex;
+  gap: 25px;
+  list-style: none;
+}
+
+.navbar ul li a {
+  text-decoration: none;
+  color: #333;
+  font-size: 16px;
+  transition: 0.3s;
+}
+
+.navbar ul li a:hover {
+  color: #0077ff;
+}
+
+/* دکمه منوی موبایل */
+.menu-btn {
+  display: none;
+  font-size: 28px;
+  cursor: pointer;
+}
+
+/* نسخه موبایل */
+@media (max-width: 768px) {
+  .navbar {
+    position: absolute;
+    top: 70px;
+    right: 0;
+    background: white;
+    width: 100%;
+    display: none;
+    flex-direction: column;
+    padding: 20px 0;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  }
+
+  .navbar ul {
+    flex-direction: column;
+    gap: 15px;
+    text-align: center;
+  }
+
+  .menu-btn {
+    display: block;
+  }
+}
+/* بخش معرفی (Hero Section) */
+.hero {
+  width: 100%;
+  height: 90vh;
+  background: url('https://images.unsplash.com/photo-1501117716987-c8e1ecb2101b') center/cover no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+/* لایه تاریک برای خوانایی بهتر */
+.hero::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.45);
+  top: 0;
+  left: 0;
+}
+
+.hero-content {
+  position: relative;
+  text-align: center;
+  color: white;
+  z-index: 2;
+}
+
+.hero-content h1 {
+  font-size: 48px;
+  margin-bottom: 15px;
+  font-weight: bold;
+}
+
+.hero-content p {
+  font-size: 20px;
+  margin-bottom: 25px;
+}
+
+.hero-btn {
+  padding: 12px 25px;
+  background: #0077ff;
+  color: white;
+  text-decoration: none;
+  border-radius: 6px;
+  font-size: 18px;
+  transition: 0.3s;
+}
+
+.hero-btn:hover {
+  background: #005fcc;
+}
+
+/* نسخه موبایل */
+@media (max-width: 768px) {
+  .hero-content h1 {
+    font-size: 32px;
+  }
+  .hero-content p {
+    font-size: 16px;
+  }
+  .hero-btn {
+    font-size: 16px;
+    padding: 10px 20px;
+  }
+}
+/* بخش امکانات هتل */
+.features {
+  padding: 60px 20px;
+  text-align: center;
+  background: #f8f8f8;
+}
+
+.features h2 {
+  font-size: 32px;
+  margin-bottom: 40px;
+  color: #333;
+}
+
+.features-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 25px;
+  max-width: 1100px;
+  margin: auto;
+}
+
+.feature-box {
+  background: white;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  transition: 0.3s;
+}
+
+.feature-box:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+}
+
+.icon {
+  font-size: 40px;
+  display: block;
+  margin-bottom: 15px;
+}
+
+.feature-box h3 {
+  font-size: 20px;
+  margin-bottom: 10px;
+  color: #222;
+}
+
+.feature-box p {
+  font-size: 15px;
+  color: #555;
+}
+/* گالری تصاویر */
+.gallery {
+  padding: 60px 20px;
+  background: #ffffff;
+  text-align: center;
+}
+
+.gallery h2 {
+  font-size: 32px;
+  margin-bottom: 40px;
+  color: #333;
+}
+
+.gallery-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  max-width: 1100px;
+  margin: auto;
+}
+
+.gallery-item {
+  overflow: hidden;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.gallery-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: 0.4s;
+}
+
+.gallery-item img:hover {
+  transform: scale(1.08);
+}
+/* بخش تماس */
+.contact {
+  padding: 60px 20px;
+  background: #f8f8f8;
+  text-align: center;
+}
+
+.contact h2 {
+  font-size: 32px;
+  margin-bottom: 40px;
+  color: #333;
+}
+
+.contact-container {
+  max-width: 1100px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+}
+
+/* اطلاعات تماس */
+.contact-info {
+  text-align: right;
+  font-size: 18px;
+  line-height: 2;
+  color: #444;
+}
+
+.contact-info a {
+  color: #0077ff;
+  text-decoration: none;
+}
+
+.contact-info a:hover {
+  text-decoration: underline;
+}
+
+/* فرم تماس */
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+}
+
+.contact-form textarea {
+  height: 120px;
+  resize: none;
+}
+
+.contact-form button {
+  padding: 12px;
+  background: #0077ff;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 18px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.contact-form button:hover {
+  background: #005fcc;
+}
+/* بخش رزرو آنلاین */
+.booking {
+  padding: 60px 20px;
+  background: #ffffff;
+  text-align: center;
+}
+
+.booking h2 {
+  font-size: 32px;
+  margin-bottom: 40px;
+  color: #333;
+}
+
+.booking-form {
+  max-width: 900px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+  align-items: end;
+}
+
+.form-group {
+  text-align: right;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 16px;
+  color: #444;
+}
+
+.form-group input,
+.form-group select {
+  width: 100%;
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+}
+
+.booking-btn {
+  padding: 14px;
+  background: #0077ff;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 18px;
+  cursor: pointer;
+  transition: 0.3s;
+  grid-column: span 3;
+}
+
+.booking-btn:hover {
+  background: #005fcc;
+}
+
+/* نسخه موبایل */
+@media (max-width: 768px) {
+  .booking-btn {
+    grid-column: span 1;
+  }
+}
+/* فوتر حرفه‌ای */
+.footer {
+  background: #111;
+  color: #ddd;
+  padding: 50px 20px 20px;
+  margin-top: 40px;
+}
+
+.footer-container {
+  max-width: 1100px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+}
+
+.footer-box h3 {
+  font-size: 20px;
+  margin-bottom: 15px;
+  color: #fff;
+}
+
+.footer-box p,
+.footer-box a {
+  font-size: 15px;
+  color: #ccc;
+  line-height: 1.8;
+  text-decoration: none;
+}
+
+.footer-box a:hover {
+  color: #0077ff;
+}
+
+.footer-box ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-box ul li {
+  margin-bottom: 10px;
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 30px;
+  padding-top: 15px;
+  border-top: 1px solid #333;
+}
+
+.footer-bottom p {
+  font-size: 14px;
+  color: #aaa;
+}
+/* بخش اتاق‌ها */
+.rooms {
+  padding: 60px 20px;
+  background: #f8f8f8;
+  text-align: center;
+}
+
+.rooms h2 {
+  font-size: 32px;
+  margin-bottom: 40px;
+  color: #333;
+}
+
+.rooms-container {
+  max-width: 1100px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 25px;
+}
+
+.room-box {
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  transition: 0.3s;
+}
+
+.room-box:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.15);
+}
+
+.room-box img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.room-box h3 {
+  font-size: 22px;
+  margin: 15px 0 10px;
+  color: #222;
+}
+
+.room-box p {
+  font-size: 15px;
+  color: #555;
+  padding: 0 15px;
+  margin-bottom: 10px;
+}
+
+.price {
+  display: block;
+  font-size: 16px;
+  color: #0077ff;
+  margin-bottom: 15px;
+}
+
+.room-btn {
+  display: block;
+  margin: 0 15px 20px;
+  padding: 10px;
+  background: #0077ff;
+  color: white;
+  text-decoration: none;
+  border-radius: 8px;
+  transition: 0.3s;
+}
+
+.room-btn:hover {
+  background: #005fcc;
+}
+/* صفحه درباره ما */
+.about {
+  padding: 60px 20px;
+  background: #ffffff;
+}
+
+.about-container {
+  max-width: 1100px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 40px;
+  align-items: center;
+}
+
+.about-text h1 {
+  font-size: 32px;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.about-text p {
+  font-size: 17px;
+  line-height: 2;
+  color: #555;
+  margin-bottom: 15px;
+}
+
+.about-image img {
+  width: 100%;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+/* حالت موبایل */
+@media (max-width: 768px) {
+/* حالت دسکتاپ (پیش‌فرض) */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: white;
+    padding: 15px 30px;
+}
+
+.navbar ul {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    margin: 0;
+    padding: 0;
+}
+
+/* موبایل */
+@media (max-width: 768px) {
+  .navbar {
+      position: absolute;
+      top: 70px;
+      left: 0;
+      width: 220px;
+      display: none;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+      z-index: 999;
+  }
+
+  .navbar ul {
+      flex-direction: column;
+      padding: 15px;
+  }
+
+  .navbar.active {
+      display: block;
+  }
+}
+.testimonials {
+  padding: 50px 20px;
+  background: #f8f8f8;
+  text-align: center;
+}
+
+.testimonials h2 {
+  font-size: 28px;
+  margin-bottom: 30px;
+}
+
+.testimonial-item {
+  background: white;
+  padding: 20px;
+  margin: 15px auto;
+  max-width: 600px;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.testimonial-item p {
+  font-size: 16px;
+  line-height: 1.7;
+  color: #444;
+}
+
+.testimonial-item h4 {
+  margin-top: 15px;
+  font-size: 18px;
+  color: #222;
+}
+.rooms-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* دسکتاپ */
+  gap: 20px;
+}
+
+/* موبایل */
+@media (max-width: 768px) {
+  .rooms-container {
+    grid-template-columns: 1fr; /* یک ستون */
+  }
+}
+.rooms-section {
+  padding: 80px 20px;
+  background: #f8f8f8;
+  text-align: center;
+}
+
+.container {
+  max-width: 1200px;
+  margin: auto;
+}
+
+/* دسکتاپ: نمایش به صورت grid (همه باز و کنار هم) */
+@media (min-width: 768px) {
+  .rooms-accordion {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 30px;
+  }
+
+  .accordion-item {
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    border-radius: 12px;
+    overflow: hidden;
+    background: white;
+  }
+
+  .accordion-header {
+    display: none; /* در دسکتاپ دکمه نیاز نیست */
+  }
+
+  .accordion-content {
+    max-height: none !important;
+    padding: 25px;
+    display: block;
+  }
+}
+
+/* موبایل و تبلت کوچک: آکاردئون کشویی */
+@media (max-width: 767px) {
+  .rooms-accordion {
+    display: block;
+  }
+
+  .accordion-item {
+    margin-bottom: 15px;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    background: white;
+  }
+
+  .accordion-header {
+    width: 100%;
+    padding: 18px 25px;
+    background: white;
+    border: none;
+    text-align: right;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .accordion-header::after {
+    content: '+';
+    font-size: 28px;
+    color: #0077ff;
+  }
+
+  .accordion-item.active .accordion-header::after {
+    content: '−';
+  }
+
+  .accordion-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease;
+    padding: 0 25px;
+    background: white;
+  }
+
+  .accordion-item.active .accordion-content {
+    max-height: 800px;
+    padding: 25px;
+  }
+}
+
+.room-image {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 12px;
+  margin-bottom: 20px;
+}
+
+.accordion-content p {
+  text-align: right;
+  margin: 15px 0;
+  color: #555;
+}
+
+.price {
+  color: #0077ff;
+  font-size: 18px;
+}
+/* مودال */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0,0,0,0.6);
+  animation: fadeIn 0.3s;
+}
+
+.modal-content {
+  background-color: #fff;
+  margin: 5% auto;
+  padding: 30px;
+  border-radius: 16px;
+  max-width: 90%;
+  width: 1200px;
+  position: relative;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+  animation: slideIn 0.4s;
+}
+
+.modal-close {
+  position: absolute;
+  top: 15px;
+  right: 25px;
+  color: #aaa;
+  font-size: 35px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.modal-close:hover {
+  color: #000;
+}
+
+.modal-title {
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 32px;
+  color: #222;
+}
+
+.modal-rooms-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 25px;
+}
+
+.modal-room-card {
+  background: #f9f9f9;
+  border-radius: 12px;
+  overflow: hidden;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  transition: 0.3s;
+}
+
+.modal-room-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+}
+
+.modal-room-img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.modal-room-card h3 {
+  margin: 15px 0 10px;
+  font-size: 22px;
+}
+
+.modal-room-card p {
+  padding: 0 15px;
+  color: #555;
+  font-size: 15px;
+  margin-bottom: 15px;
+}
+
+.modal-price {
+  display: block;
+  font-size: 18px;
+  color: #0077ff;
+  font-weight: bold;
+  margin: 10px 0;
+}
+
+.modal-btn {
+  display: inline-block;
+  background: #0077ff;
+  color: white;
+  padding: 12px 20px;
+  border-radius: 8px;
+  text-decoration: none;
+  margin-bottom: 20px;
+  transition: 0.3s;
+}
+
+.modal-btn:hover {
+  background: #005fcc;
+}
+
+/* انیمیشن */
+@keyframes fadeIn {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+
+@keyframes slideIn {
+  from {transform: translateY(-50px); opacity: 0;}
+  to {transform: translateY(0); opacity: 1;}
+}
+
+/* موبایل */
+@media (max-width: 768px) {
+  .modal-content {
+    margin: 0;
+    height: 100%;
+    border-radius: 0;
+    padding: 20px;
+  }
+  .modal-rooms-grid {
+    grid-template-columns: 1fr;
+  }
+}
+.modal-room-img {
+  width: 100%;
+  height: 220px; /* ارتفاع ثابت برای یکدستی */
+  object-fit: cover; /* مهم‌ترین خط – عکس رو زیبا کراپ می‌کنه بدون کشیدن */
+  border-radius: 12px 12px 0 0;
+  display: block;
+}
