@@ -916,3 +916,20 @@ footer {
   border-radius: 12px 12px 0 0;
   display: block;
 }
+  .modal-room-img {
+  width: 100%;                    /* عرض کامل کارت */
+  aspect-ratio: 16 / 10;          /* نسبت ابعاد ثابت – همه عکس‌ها یکسان (۱۶:۱۰ عالی برای اتاق هتل) */
+  object-fit: cover;              /* عکس رو زیبا کراپ می‌کنه */
+  object-position: center;        /* فوکوس روی مرکز عکس (سر تخت یا قسمت اصلی نگه داشته می‌شه) */
+  border-radius: 12px 12px 0 0;   /* گوشه‌های بالا گرد */
+  display: block;
+  background: #f0f0f0;            /* رنگ پس‌زمینه تا وقتی لود می‌شه */
+  }
+  .modal-room-card {
+  display: flex;
+  flex-direction: column;
+}
+
+.modal-room-card > * {
+  flex-shrink: 0; /* جلوگیری از فشرده شدن متن */
+}
