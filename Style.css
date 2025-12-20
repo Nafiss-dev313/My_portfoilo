@@ -204,10 +204,12 @@ footer {
   }
 }
 /* بخش امکانات هتل */
-.features {
-  padding: 60px 20px;
-  text-align: center;
-  background: #f8f8f8;
+.feature-img {
+  width: 100%;
+  aspect-ratio: 1 / 1;            /* مربع برای امکانات */
+  object-fit: cover;
+  border-radius: 12px;
+  margin-bottom: 15px;
 }
 
 .features h2 {
@@ -254,10 +256,11 @@ footer {
   color: #555;
 }
 /* گالری تصاویر */
-.gallery {
-  padding: 60px 20px;
-  background: #ffffff;
-  text-align: center;
+.gallery-item img {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  border-radius: 12px;
 }
 
 .gallery h2 {
