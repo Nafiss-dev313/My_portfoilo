@@ -935,9 +935,8 @@ footer {
   object-position: center;       /* قسمت مهم (تخت، پنجره) وسط بمونه */
  border-radius: 12px;
   display: block;
-  flex-shrink: 0;                /* عکس فشرده نشه */
+  background: #f0f0f0;            /* پس‌زمینه تا لود شدن */
 }
-
 .modal-room-card h3, 
 .modal-room-card p, 
 .modal-room-card .modal-price, 
