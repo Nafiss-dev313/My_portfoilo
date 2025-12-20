@@ -1,4 +1,4 @@
-// تابع منوی همبرگری (این حتماً بمونه)
+// منوی همبرگری
 function toggleMenu() {
   const navbar = document.getElementById("navbar");
   if (navbar) {
@@ -6,28 +6,30 @@ function toggleMenu() {
   }
 }
 
-// کد مودال اتاق‌ها (این رو کامل جایگزین کن)
-const modal = document.getElementById("rooms-modal");
-const openBtn = document.getElementById("open-rooms-modal");
-const closeBtn = document.querySelector(".modal-close");
+// مودال اتاق‌ها
+document.addEventListener("DOMContentLoaded", function () {
+  const modal = document.getElementById("rooms-modal");
+  const openBtn = document.getElementById("open-rooms-modal");
+  const closeBtn = document.querySelector(".modal-close");
 
-// باز کردن مودال
-if (openBtn) {
-  openBtn.onclick = function() {
-    modal.style.display = "block";
+  // باز کردن مودال
+  if (openBtn && modal) {
+    openBtn.addEventListener("click", function () {
+      modal.style.display = "block";
+    });
   }
-}
 
-// بستن با دکمه ×
-if (closeBtn) {
-  closeBtn.onclick = function() {
-    modal.style.display = "none";
+  // بستن با دکمه ×
+  if (closeBtn && modal) {
+    closeBtn.addEventListener("click", function () {
+      modal.style.display = "none";
+    });
   }
-}
 
-// بستن با کلیک خارج از مودال
-window.onclick = function(event) {
-  if (event.target == modal) {
-    modal.style.display = "none";
-  }
-}
+  // بستن با کلیک بیرون از مودال
+  window.addEventListener("click", function (event) {
+    if (event.target === modal) {
+      modal.style.display = "none";
+    }
+  });
+});
