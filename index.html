@@ -1,229 +1,83 @@
 <!DOCTYPE html>
 <html lang="fa" dir="rtl">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>هتل رویال</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>هتل رویال</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <header class="header">
-
-  <div class="menu-btn" onclick="toggleMenu()">☰</div>
-
-  <nav class="navbar" id="navbar">
-    <ul>
-      <li><a href="#hero">خانه</a></li>
-      <li><a href="#gallery">گالری</a></li>
-      <li><a href="#about">درباره ما</a></li>
-      <li><a href="#booking">رزرو آنلاین</a></li>
-      <li><a href="#contact">تماس با ما</a></li>
-    </ul>
+<header class="header">
+  <div class="logo">هتل رویال</div>
+  <nav class="nav">
+    <a href="#hero">خانه</a>
+    <a href="#features">امکانات</a>
+    <a href="#gallery">گالری</a>
+    <a href="#booking">رزرو</a>
+    <a href="#contact">تماس</a>
   </nav>
-
-  <div class="logo">
-    <img src="Images/Logo-royal.jpeg" width="100" height="100" alt="هتل رویال">
-  </div>
-
 </header>
 
-  <section id="hero" class="hero">
+<section id="hero" class="hero">
   <div class="hero-content">
-      <img src="Royal hotel.jpg" alt="هتل رویال" class="model-room-img">
     <h1>هتل رویال</h1>
-    <p>اقامتی آرام، لوکس و فراموش‌نشدنی در قلب شهر</p>
-    <button id="open-rooms-modal" class="hero-btn">مشاهده اتاق‌ها و سوئیت‌ها</button>
+    <p>اقامتی آرام و لوکس در قلب شهر</p>
+    <a href="#booking" class="btn">رزرو آنلاین</a>
   </div>
 </section>
 
-    <section class="features">
+<section id="features" class="features container">
   <h2>امکانات هتل</h2>
-  <div class="features-container">
-
-    <div class="feature-box"> 
-    <img src="Wi-fi.jpg" alt="وای فای هتل" class="modal-room-img">
+  <div class="grid">
+    <div class="card">
+      <img src="Wi-fi.jpg" alt="">
       <h3>وای‌فای رایگان</h3>
-      <p>اینترنت پرسرعت در تمام اتاق‌ها و لابی</p>
     </div>
-
-    <div class="feature-box">
-      <img src="resturan.jpg" alt="رستوان" class="modal-room-img">
-      <h3>رستوران اختصاصی</h3>
-      <p>منوی متنوع با غذاهای ایرانی و بین‌المللی</p>
+    <div class="card">
+      <img src="resturan.jpg" alt="">
+      <h3>رستوران</h3>
     </div>
-
-    <div class="feature-box">
-       <img src="stakhr.jpg" alt="استخر هتل" class="modal-room-img">
+    <div class="card">
+      <img src="stakhr.jpg" alt="">
       <h3>استخر و سونا</h3>
-      <p>محیطی آرام برای استراحت و ریلکس کردن</p>
     </div>
-
-    <div class="feature-box">
-      <img src="parking hotel.jpg" alt="پارکینگ هتل" class="modal-room-img">
-      <h3>پارکینگ رایگان</h3>
-      <p>پارکینگ امن و ۲۴ ساعته برای مهمانان</p>
+    <div class="card">
+      <img src="parking hotel.jpg" alt="">
+      <h3>پارکینگ</h3>
     </div>
+  </div>
+</section>
 
-    <section id="gallery" class="gallery">
+<section id="gallery" class="gallery container">
   <h2>گالری تصاویر</h2>
-  <div class="gallery-container">
+  <div class="grid">
+    <img src="Double-room.jpg" alt="">
+    <img src="Labi.jpg" alt="">
+    <img src="resturant.jpg" alt="">
+    <img src="Stakhr hotel.jpg" alt="">
+  </div>
+</section>
 
-    <div class="gallery-item">
-      <img src="Double-room.jpg" alt="اتاق دوتخته" class="modal-room-img">
-    </div>
-
-    <div class="gallery-item">
-      <img src="Labi.jpg" alt="لابی هتل" class="modal-room-img">
-    </div>
-
-    <div class="gallery-item">
-      <img src="resturant.jpg" alt="رستوران هتل" class="modal-room-img">
-    </div>
-
-    <div class="gallery-item">
-      <img src="Stakhr hotel.jpg" alt="استخر هتل" class="modal-room-img">
-    </div>
-
-    </div>
-    </section>
-
-    <section id="booking" class="booking">
+<section id="booking" class="booking container">
   <h2>رزرو آنلاین</h2>
-
-  <form class="booking-form">
-
-    <div class="form-group">
-      <label>تاریخ ورود</label>
-      <input type="date" required>
-    </div>
-
-    <div class="form-group">
-      <label>تاریخ خروج</label>
-      <input type="date" required>
-    </div>
-
-    <div class="form-group">
-      <label>تعداد مهمان</label>
-      <select required>
-        <option>1 نفر</option>
-        <option>2 نفر</option>
-        <option>3 نفر</option>
-        <option>4 نفر</option>
-        <option>5 نفر</option>
-      </select>
-    </div>
-
-    <button type="submit" class="booking-btn">جستجوی اتاق‌های خالی</button>
-
+  <form class="form">
+    <input type="date" required>
+    <input type="date" required>
+    <select>
+      <option>1 نفر</option>
+      <option>2 نفر</option>
+      <option>3 نفر</option>
+    </select>
+    <button>جستجو</button>
   </form>
 </section>
-    <section id="about" class="section">
-        <h2>درباره هتل</h2>
-        <p>
-            هتل رویال با بهترین امکانات رفاهی، چشم‌انداز فوق‌العاده و خدمات حرفه‌ای،
-            تجربه‌ای متفاوت از اقامت را برای شما فراهم می‌کند.
-        </p>
-    </section>
 
-<section id="testimonials" class="testimonials">
-  <h2>نظرات مشتریان</h2>
-
-  <div class="testimonial-item">
-    <p>"اقامت فوق‌العاده‌ای داشتیم. اتاق‌ها بسیار تمیز و آرام بودند. کارکنان هم رفتار بسیار حرفه‌ای داشتند."</p>
-    <h4>مریم احمدی</h4>
-  </div>
-
-  <div class="testimonial-item">
-    <p>"صبحانه متنوع و خوشمزه بود. موقعیت هتل عالی بود و دسترسی راحتی به مرکز شهر داشتیم."</p>
-    <h4>علی رضایی</h4>
-  </div>
-
-  <div class="testimonial-item">
-    <p>"فضای لابی بسیار لوکس و دلنشین بود. قطعاً دوباره این هتل را انتخاب می‌کنم."</p>
-    <h4>سارا محمدی</h4>
-  </div>
-</section>
-    <footer id="contact" class="footer">
-
-  <div class="footer-container">
-
-    <!-- معرفی کوتاه -->
-    <div class="footer-box">
-      <h3>هتل رویال</h3>
-      <p>اقامتی لوکس، آرام و فراموش‌نشدنی در قلب شهر.  
-      بهترین خدمات و امکانات برای مهمانان عزیز.</p>
-    </div>
-
-    
-
-    <!-- اطلاعات تماس -->
-    <div class="footer-box">
-      <h3>تماس با ما</h3>
-      <p>📞 0912-000-0000</p>
-      <p>📍 مشهد، خیابان مثال، هتل رویال</p>
-      <p>📱 <a href="#">واتساپ</a></p>
-      <p>📸 <a href="#">اینستاگرام</a></p>
-    </div>
-
-  </div>
-
-  <div class="footer-bottom">
-    <p>© 2025 هتل رویال — تمامی حقوق محفوظ است</p>
-  </div>
-
+<footer id="contact" class="footer">
+  <p>📞 0912-000-0000</p>
+  <p>📍 مشهد - هتل رویال</p>
+  <p>© 2025 Royal Hotel</p>
 </footer>
-      
-<!-- مودال اتاق‌ها -->
-<div id="rooms-modal" class="modal">
-  <div class="modal-content">
-    <span class="modal-close">&times;</span>
-    <h2 class="modal-title">اتاق‌ها و سوئیت‌های هتل رویال</h2>
-    
-    <div class="modal-rooms-grid">
 
-      <!-- اتاق یک‌تخته -->
-      <div class="modal-room-card">
-        <img src="Single-room.jpg" alt="اتاق یک تخته" class="modal-room-img">
-        <h3>اتاق یک‌تخته</h3>
-        <p>اتاقی دنج و مدرن با تخت تک‌نفره راحت، حمام اختصاصی، میز کار و چشم‌انداز شهر.</p>
-        <span class="modal-price">از ۸۵۰,۰۰۰ تومان</span>
-        <a href="#booking" class="modal-btn">رزرو اتاق</a>
-      </div>
-
-      <!-- اتاق دوتخته -->
-      <div class="modal-room-card">
-        <img src="double-room.jpg" alt="اتاق دو تخته" class="modal-room-img">
-        <h3>اتاق دوتخته</h3>
-        <p>فضای وسیع با تخت کینگ یا دو تخت جدا، بالکن خصوصی و امکانات کامل رفاهی.</p>
-        <span class="modal-price">از ۱,۲۰۰,۰۰۰ تومان</span>
-        <a href="#booking" class="modal-btn">رزرو اتاق</a>
-      </div>
-
-      <!-- سوئیت لوکس -->
-      <div class="modal-room-card">
-        <img src="Lux-suit.jpg" alt="سوئیت لوکس" class="modal-room-img">
-        <h3>سوئیت لوکس</h3>
-        <p>سوئیت بزرگ با نشیمن جداگانه، جکوزی و چشم‌انداز پانوراما.</p>
-        <span class="modal-price">از ۲,۵۰۰,۰۰۰ تومان</span>
-        <a href="#booking" class="modal-btn">رزرو سوئیت</a>
-      </div>
-
-      <!-- سوئیت VIP -->
-      <div class="modal-room-card">
-          <img src="Vip suit.jpg" alt="سوئیتvip" class="modal-room-img">
-        <h3>سوئیت VIP</h3>
-        <p>بالاترین سطح لوکس با سالن پذیرایی، سرویس اختصاصی ۲۴ ساعته و طراحی مجلل.</p>
-        <span class="modal-price">از ۴,۸۰۰,۰۰۰ تومان</span>
-        <a href="#booking" class="modal-btn">رزرو سوئیت</a>
-      </div>
-
-  </div>
-</div>
-<script src="script.js"></script>
 </body>
 </html>
-
-
-
-
