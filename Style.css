@@ -826,9 +826,6 @@ footer {
 }
 
 .modal-rooms-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 25px;
   margin-top: 40px;        
 }
 
@@ -907,7 +904,6 @@ footer {
     padding: 20px;
   }
   .modal-rooms-grid {
-    grid-template-columns: 1fr;
   margin-top: 40px;
 }
 .modal-room-img {
