@@ -829,6 +829,7 @@ footer {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 25px;
+  margin-top: 30px;          /* ← این خط فاصله از بالا رو برای همه کارت‌ها یکسان می‌کنه */
 }
 
 .modal-room-card {
